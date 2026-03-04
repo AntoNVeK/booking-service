@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: hotel-booking
+  datasource:
+    url: jdbc:postgresql://localhost:5433/booking
+    username: booking
+    password: booking
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:liquibase/changelog-master.yml
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: metrics, prometheus

@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: liquibase/migrations/01_init.sql
+  - include:
+      file: liquibase/migrations/02_add_indexes.sql
